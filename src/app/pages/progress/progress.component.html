@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="porcetaje" aria-valuemin="0" aria-valuemax="100" [style.width]="porcetaje+ '%'"></div>
+                </div>
+                <br/>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="porcetaje1" aria-valuemin="0" aria-valuemax="100" [style.width]="porcetaje1+ '%'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementador (NuevoValor)="porcetaje = $event" leyenda='leyenda Azul' [porcetaje]='porcetaje'></app-incrementador>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementador (NuevoValor)="porcetaje1 = $event" leyenda='leyenda Azul' [porcetaje]='porcetaje1'></app-incrementador>
+            </div>
+        </div>
+    </div>
+</div>
